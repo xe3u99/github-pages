@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="#">Beauty Studio.</a></div>
+            <ul class="menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#pricelist">Price List</a></li>
+                <li><a href="index.html#location">Location</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="reservation-section">
+        <div class="reservation-form">
+            <h2>Book an Appointment</h2>
+            <form id="paymentForm" action="save_booking.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="phone-number">Phone Number:</label>
+                <input type="tel" id="phone_number" name="phone_number" placeholder="Enter your phone number" required>
+                
+                <label for="services">Select Services:</label>
+                <select id="services" name="services" multiple required>
+                    <option value="Hair Cutting" data-price="50000">Hair Cutting - Rp50,000</option>
+                    <option value="Hairstyle" data-price="80000">Hairstyle - Rp80,000</option>
+                    <option value="Hair Coloring" data-price="150000">Hair Coloring - Rp150,000</option>
+                    <option value="Facial" data-price="120000">Facial - Rp120,000</option>
+                    <option value="Anti-aging Treatment" data-price="130000">Anti-aging Treatment - Rp130,000</option>
+                    <option value="Manicure & Padicure" data-price="100000">Manicure & Padicure - Rp100,000</option>
+                    <option value="Perfect nail treatment" data-price="110000">Perfect Nail Treatment - Rp110,000</option>
+                    <option value="Spa" data-price="150000">Spa - Rp150,000</option>
+                    <option value="Relaxing Massage" data-price="130000">Relaxing Massage - Rp130,000</option>
+                </select>
+
+                <label for="total">Total Price:</label>
+                <input type="text" id="total" name="total" readonly>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+                
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="ewallet">E-Wallet (OVO, GoPay, etc.)</option>
+                </select>
+                    
+                <div id="credit-bank" style="display: none;">
+                    <label for="bank">Select Bank:</label>
+                    <select id="bank" name="bank">
+                        <option value="bca">BCA</option>
+                        <option value="bri">BRI</option>
+                        <option value="mandiri">Mandiri</option>
+                        <option value="bni">BNI</option>
+                    </select>
+                </div>
+                
+                <div id="ewallet-choice" style="display: none;">
+                    <label for="ewallet">Select Wallet:</label>
+                    <select id="ewallet" name="ewallet">
+                        <option value="ovo">OVO</option>
+                        <option value="gopay">GoPay</option>
+                        <option value="dana">Dana</option>
+                        <option value="linkaja">LinkAja</option>
+                    </select>
+                </div>
+    
+                <div id="pin-bank" style="display: none;">
+                    <label for="pin">Bank PIN:</label>
+                    <input type="password" id="pin" name="pin" placeholder="Enter bank PIN" required>
+                </div>
+
+                <div id="phone-ewallet" style="display: none;">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+                </div>
+
+                <button type="button" id="payButton" class="tbl-pink">Pay Now</button>
+            </form>
+            
+            <div id="paymentNotification" style="display: none; color: green;">
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
