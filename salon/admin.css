@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #FCFAEE;
+    color: #333;
+}
+
+/* Header */
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #DED0B6;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.box-header h1 {
+    font-size: 20px;
+}
+
+.tbl-maroon {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #a64242;
+    color: white;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.tbl-maroon:hover {
+    background-color: #7f3030;
+}
+
+.main-content {
+    margin-left: 240px;
+    padding: 70px 20px;
+    margin-top: 0px; /* Tambahkan margin-top untuk menghindari overlap dengan header */
+}
+
+
+/* Main Content */
+.main-content {
+    margin-left: 240px;
+    padding: 70px 20px;
+}
+
+/* Table */
+.price-list {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.price-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0; /* Tambahkan jarak ke elemen lain */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    border-radius: 8px; /* Sudut melengkung */
+    overflow: hidden; /* Hilangkan elemen yang keluar */
+}
+
+.price-list td {
+    padding: 12px 15px;
+    text-align: center; /* Semua teks di tengah */
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.price-list tr:hover {
+    background-color: #f5f5f5; /* Warna latar saat dihover */
+}
+
+.price-list tr:nth-child(even) {
+    background-color: #f9f9f9; /* Striping warna */
+}
+
+
+.price-list th {
+    background-color: #a64242; /* Warna merah yang lebih mencolok */
+    color: white; /* Teks putih agar terlihat jelas */
+    text-transform: uppercase; /* Huruf besar untuk judul */
+    font-size: 14px; /* Ukuran font lebih besar */
+    padding: 15px; /* Tambahkan padding */
+    border-bottom: 2px solid #ddd; /* Border bawah untuk pembatas */
+    text-align: center; /* Teks di tengah */
+}
+
+
+.price-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.price-list tr:hover {
+    background-color: #f1f1f1;
+}
+
+.price-list td {
+    font-size: 14px;
+}
+
+/* Actions */
+.edit, .delete {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+}
+
+.edit {
+    background-color: #4caf50;
+}
+
+.delete {
+    background-color: #f44336;
+}
+
+.edit:hover {
+    background-color: #45a049;
+}
+
+.delete:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+        padding: 20px;
+    }
+
+    .price-list th, .price-list td {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .price-list th, .price-list td {
+        font-size: 10px;
+    }
+}
